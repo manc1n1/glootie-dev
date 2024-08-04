@@ -1,0 +1,130 @@
+.header {
+	position: sticky;
+	top: 0;
+	height: 80px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--accent-dark);
+	border-bottom: 1px solid var(--green);
+	box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+	z-index: 1000;
+}
+
+.headerBrand a {
+	color: var(--green);
+	text-decoration: none;
+	font-size: 2rem;
+	margin-left: 1rem;
+}
+
+.headerNav {
+	display: flex;
+	gap: 1rem;
+	margin-right: 1rem;
+	transition: 0.5s ease-in-out;
+	background-color: var(--accent-dark);
+}
+
+.headerNav a {
+	color: var(--green);
+	font-size: 1.5rem;
+	text-decoration: none;
+}
+
+.headerToggle {
+	display: none;
+	background: none;
+	border: none;
+	color: var(--green);
+	cursor: pointer;
+	margin-left: 1rem;
+}
+
+.headerBrand a:hover,
+.headerNav a:hover {
+	color: var(--pink);
+}
+
+.headerNav a::after {
+	content: '';
+	display: block;
+	width: 0;
+	height: 1px;
+	background: var(--pink);
+	transition: width 0.3s;
+}
+
+.headerNav a:hover::after {
+	width: 100%;
+}
+
+@media (prefers-color-scheme: light) {
+	.header {
+		background-color: var(--accent-light);
+		border-bottom: 1px solid var(--pink);
+	}
+
+	.headerNav {
+		background-color: var(--accent-light);
+	}
+
+	.headerBrand a,
+	.headerNav a,
+	.headerToggle {
+		color: var(--pink);
+	}
+
+	.headerBrand a:hover,
+	.headerNav a:hover {
+		color: var(--green);
+	}
+
+	.headerNav a::after {
+		background: var(--green);
+	}
+}
+
+@media (max-width: 768px) {
+	.header {
+		flex-direction: row-reverse;
+	}
+
+	.headerBrand a {
+		margin-right: 1rem;
+	}
+
+	.headerNav {
+		position: absolute;
+		top: 80px;
+		left: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		max-height: 0;
+		width: 100%;
+		overflow-x: hidden;
+		border-bottom: 1px solid var(--green);
+	}
+
+	.headerNav a {
+		/* width: 100%; */
+		padding: 1rem 2rem;
+		box-sizing: border-box;
+	}
+
+	.headerNavOpen {
+		max-height: 100vh;
+		display: flex;
+	}
+
+	.headerToggle {
+		display: block;
+	}
+
+	@media (prefers-color-scheme: light) {
+		.headerNav {
+			border-bottom: 1px solid var(--pink);
+		}
+	}
+}

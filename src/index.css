@@ -1,16 +1,40 @@
 @font-face {
-	font-family: 'Glootie';
-	src: url('assets/fonts/glootie.ttf') format('truetype');
+	font-family: Glootie;
+	src: url('assets/fonts/Glootie.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: Poppins;
+	src: url('assets/fonts/Poppins.ttf') format('truetype');
 }
 
 :root {
+	--dark: #1e1e2e;
+	--light: #cdd6f4;
+
+	--accent-opacity: 0.75;
+
+	--accent-dark: #181825;
+	--accent-dark-r: 24;
+	--accent-dark-g: 24;
+	--accent-dark-b: 37;
+
+	--accent-light: #313244;
+	--accent-light-r: 49;
+	--accent-light-g: 50;
+	--accent-light-b: 68;
+
+	--pink: #f5c2e7;
+	--green: #a6e3a1;
+	--purple: #cba6f7;
+
 	font-family: Glootie, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-	line-height: 1.5;
+	/* line-height: 1.5; */
 	font-weight: 400;
 
 	color-scheme: light dark;
-	color: rgba(255, 255, 255, 0.87);
-	background-color: #242424;
+	color: var(--light);
+	background-color: var(--dark);
 
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
@@ -21,14 +45,14 @@
 body {
 	margin: 0;
 	display: flex;
-	place-items: center;
+	flex-direction: column;
 	min-width: 320px;
 	min-height: 100vh;
 }
 
 @media (prefers-color-scheme: light) {
 	:root {
-		color: #213547;
-		background-color: #ffffff;
+		color: var(--dark);
+		background-color: var(--light);
 	}
 }

@@ -15,6 +15,7 @@ const Header: React.FC = () => {
 
 	const toggleMobileMenu = () => {
 		setOpen(!isOpen);
+		scrollToTop();
 	};
 
 	return (

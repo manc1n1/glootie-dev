@@ -1,0 +1,92 @@
+.formField {
+	display: flex;
+	position: relative;
+	margin: 30px 0;
+}
+
+.formInput,
+.formTextarea {
+	font-family: Poppins;
+	width: 100%;
+	padding: 10px;
+	font-size: 1rem;
+	color: var(--text-dark);
+	background-color: var(--accent-dark);
+	border: 1px solid var(--green-dark);
+	border-radius: 4px;
+	resize: none;
+}
+
+.formLabel {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	padding: 0 5px;
+	color: var(--text-dark);
+	transition: all 0.2s ease-out;
+	pointer-events: none;
+}
+
+.formInput:focus + .formLabel,
+.formTextarea:focus + .formLabel,
+.filled {
+	top: -20px;
+	left: 0;
+	font-size: 0.75rem;
+}
+
+.formInput:focus-visible,
+.formTextarea:focus-visible {
+	outline: 1px auto var(--pink-dark);
+}
+
+.formBtn {
+	font-family: Poppins;
+	font-size: 1rem;
+	width: 100%;
+	color: var(--accent-dark);
+	background-color: var(--green-dark);
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	padding: 10px;
+}
+
+.formBtn:hover {
+	background-color: var(--pink-dark);
+}
+
+.formSpan {
+	color: var(--green-dark);
+}
+
+@media (prefers-color-scheme: light) {
+	.formInput,
+	.formTextarea {
+		color: var(--text-light);
+		background-color: var(--accent-light);
+		border: 1px solid var(--pink-light);
+	}
+
+	.formLabel {
+		color: var(--text-light);
+	}
+
+	.formInput:focus-visible,
+	.formTextarea:focus-visible {
+		outline: 1px auto var(--green-light);
+	}
+
+	.formBtn {
+		color: var(--accent-light);
+		background-color: var(--pink-light);
+	}
+
+	.formBtn:hover {
+		background-color: var(--green-light);
+	}
+
+	.formSpan {
+		color: var(--pink-light);
+	}
+}

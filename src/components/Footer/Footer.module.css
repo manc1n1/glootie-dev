@@ -6,9 +6,9 @@
 	align-items: center;
 	bottom: 0;
 	width: 100%;
-	color: var(--green);
+	color: var(--green-dark);
 	background-color: var(--accent-dark);
-	border-top: 1px solid var(--green);
+	border-top: 1px solid var(--green-dark);
 }
 
 .footerCopywrite {
@@ -26,26 +26,26 @@
 }
 
 .footerIcons a {
-	color: var(--green);
+	color: var(--green-dark);
 	text-decoration: none;
 }
 
 .footerIcons a:hover {
-	color: var(--pink);
+	color: var(--pink-dark);
 }
 
 @media (prefers-color-scheme: light) {
 	.footer {
-		color: var(--pink);
+		color: var(--pink-light);
 		background-color: var(--accent-light);
-		border-top: 1px solid var(--pink);
+		border-top: 1px solid var(--pink-light);
 	}
 
 	.footerIcons a {
-		color: var(--pink);
+		color: var(--pink-light);
 	}
 
 	.footerIcons a:hover {
-		color: var(--green);
+		color: var(--green-light);
 	}
 }

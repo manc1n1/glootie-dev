@@ -1,5 +1,7 @@
+import Title from '@/components/Title';
+
 const About: React.FC = () => {
-	return <h1>About</h1>;
+	return <Title text={'About'} />;
 };
 
 export default About;

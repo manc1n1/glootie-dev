@@ -1,5 +1,7 @@
+import Title from '@/components/Title';
+
 const PageNotFound: React.FC = () => {
-	return <h1>404</h1>;
+	return <Title text={'404'} />;
 };
 
 export default PageNotFound;

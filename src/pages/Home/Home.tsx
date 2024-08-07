@@ -1,5 +1,7 @@
+import Title from '@/components/Title';
+
 const Home: React.FC = () => {
-	return <h1>Home</h1>;
+	return <Title text={'Home'} />;
 };
 
 export default Home;

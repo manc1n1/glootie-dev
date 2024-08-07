@@ -1,12 +1,12 @@
+import Title from '@/components/Title';
 import ContactForm from '@/components/ContactForm';
-import styles from './Contact.module.css';
 
 const Contact: React.FC = () => {
 	return (
-		<section className={styles.container}>
-			<h1>Contact</h1>
+		<>
+			<Title text={'Contact'} />
 			<ContactForm />
-		</section>
+		</>
 	);
 };
 

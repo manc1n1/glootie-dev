@@ -1,5 +1,7 @@
+import Title from '@/components/Title';
+
 const Resume: React.FC = () => {
-	return <h1>Resume</h1>;
+	return <Title text={'Resume'} />;
 };
 
 export default Resume;

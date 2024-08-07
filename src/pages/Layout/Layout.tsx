@@ -8,7 +8,9 @@ const Layout: React.FC = () => {
 		<>
 			<Header />
 			<main className={styles.main}>
-				<Outlet />
+				<section className={styles.section}>
+					<Outlet />
+				</section>
 			</main>
 			<Footer />
 		</>

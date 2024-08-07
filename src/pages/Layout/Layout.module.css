@@ -3,3 +3,11 @@
 	display: flex;
 	justify-content: center;
 }
+
+.section {
+	width: 100%;
+	max-width: 500px;
+	margin: 0 auto;
+	padding: 0 5rem;
+	text-align: center;
+}
